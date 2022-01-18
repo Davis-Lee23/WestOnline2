@@ -1,0 +1,15 @@
+对于城市基本信息的API
+	①addCity(String city)：添加城市基本信息到数据库
+	（偷懒）②delete（int id）：根据id一座座删除城市
+	③findCity（String cityName）：根据城市名称查询
+	④findAllCity（）：返回数据库中所有城市基本信息
+
+对于天气信息的API（全是偷懒根据id，没有转换为名字查询）
+	①addWeather（int id）：根据id给城市表中同id城市添加天气数据，若城市表没有这个id，返回错误信息
+	②findCityWeather（int id）：根据id查找相应城市信息
+	③findWeatherByDateAndId()：根据日期、id排序返回所有天气数据
+
+通用方法：
+	getJson（String city，int function，int id）：
+		根据function的值执行对城市或对天气的操作
+		具体注释在代码内
